@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .aligen-content {
+    @apply max-w-7xl m-auto px-5;
+  }
+  #root {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  /* main {
+    background-image: url("https://assets.architecuraldigest.in/photos/63473a80d1cadacf89bca5d4/16:9/w_2560%2Cc_limit/Kitchen%2520ideas.jpg");
+    max-width: fit-content;
+    height: 100%;
+    height: 100vh;
+    width: 100%;
+  } */}
