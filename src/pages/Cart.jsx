@@ -122,12 +122,56 @@ function Cart() {
               <th>
                 <button
                   onClick={() => {
-                    dispatch(deleteAll());
+                    document
+                      .getElementById("my_modal_7")
+                      .classList.add("modal-open");
                   }}
                   className=" badge badge-outline text-xs"
                 >
                   Delete All
                 </button>
+                <dialog id="my_modal_7" className="modal">
+                  <div className="modal-box text-base-content">
+                    <h3 className="font-bold text-lg">Are you sure?</h3>
+                    <p className="py-4 font-normal text-lg">
+                      Are you sure you want to delete all ?
+                    </p>
+                    <div className="flex gap-2   justify-end items-center">
+                      <button
+                        onClick={() => {
+                          document
+                            .getElementById("my_modal_7")
+                            .classList.remove("modal-open");
+                        }}
+                        className="btn  btn-info "
+                      >
+                        Back
+                      </button>
+                      <button
+                        onClick={() => {
+                          dispatch(deleteAll());
+                          document
+                            .getElementById("my_modal_7")
+                            .classList.remove("modal-open");
+                        }}
+                        className="btn btn-error "
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                  <form method="dialog" className="modal-backdrop">
+                    <button
+                      onClick={() => {
+                        document
+                          .getElementById("my_modal_7")
+                          .classList.remove("modal-open");
+                      }}
+                    >
+                      close
+                    </button>
+                  </form>
+                </dialog>
               </th>
             </tr>
           </tfoot>

@@ -11,8 +11,8 @@ function ModalDelete({ dish, list }) {
       <div className="modal-box">
         <h3 className="font-bold text-lg">Are you sure?</h3>
         <p className="py-4 fon">
-          Are you sure you want to delete
-          <span className=" capitalize">{dish.title}</span>?
+          Are you sure you want to delete{" "}
+          <span className=" capitalize"> {dish.title}</span>?
         </p>
         <div className="flex gap-2   justify-end items-center">
           <button

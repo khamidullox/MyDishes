@@ -193,19 +193,36 @@ function Create() {
           <button
             className="btn btn-secondary max-w-3xl lg:w-72 md:w-72 sm:w-52 w-28"
             onClick={(e) => {
+              // e.preventDefault();
+              // if (
+              //   !(preview.title == "") &&
+              //   !(preview.time == "") &&
+              //   !(preview.method == "") &&
+              //   !(preview.price == "") &&
+              //   preview.ingredients.length > 0 &&
+              //   preview.imgURLs.length > 0
+              // ) {
+              //   document
+              //     .getElementById("my_modal_1")
+              //     .classList.add("modal-open");
+              // }
+              // addPreview(
+              //   titleRef,
+              //   methodRef,
+              //   timeRef,
+              //   priceRef,
+              //   imgURLs,
+              //   ingredients,
+              //   selectRef
+              // );
+              // let ptivData = {
+              //   title: preview.title,
+              //   time: preview.time,
+              //   // method: preview.method,
+              //   price: preview.price,
+              // };
+              // chekInput(ptivData, newData);
               e.preventDefault();
-              if (
-                !(preview.title == "") &&
-                !(preview.time == "") &&
-                !(preview.method == "") &&
-                !(preview.price == "") &&
-                preview.ingredients.length > 0 &&
-                preview.imgURLs.length > 0
-              ) {
-                document
-                  .getElementById("my_modal_1")
-                  .classList.add("modal-open");
-              }
               addPreview(
                 titleRef,
                 methodRef,
@@ -215,13 +232,25 @@ function Create() {
                 ingredients,
                 selectRef
               );
-              let ptivData = {
+              if (
+                preview.title &&
+                preview.time &&
+                preview.method &&
+                preview.price &&
+                preview.ingredients.length > 0 &&
+                preview.imgURLs.length > 0
+              ) {
+                document
+                  .getElementById("my_modal_1")
+                  .classList.add("modal-open");
+              }
+              let previewData = {
                 title: preview.title,
                 time: preview.time,
-                // method: preview.method,
+                method: preview.method,
                 price: preview.price,
               };
-              chekInput(ptivData, newData);
+              chekInput(previewData, newData);
             }}
           >
             Preview

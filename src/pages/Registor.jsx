@@ -44,7 +44,7 @@ function Registor() {
         src="/bg-login.mp4"
       ></video>
       <div className="aligen-content flex items-center justify-center h-screen place-items-center scroll-smooth  ">
-        <div className=" flex flex-col items-center justify-center gap-5 card glass py-5 px-16 ">
+        <div className=" flex flex-col items-center justify-center gap-5 card glass sm:py-5 sm:px-16 px-5 py-2 ">
           <h1 className=" font-bold text-4xl uppercase">Registor</h1>
           <Form
             method="post"
